@@ -1,0 +1,45 @@
+1. Buat Database
+	CREATE DATABASE myshop;
+
+
+2. Buat Table
+	- Table users:
+	CREATE TABLE users( id integer PRIMARY KEY AUTO_INCREMENT, name varchar(255) NOT null );
+
+	- Table categories:
+	CREATE TABLE categories( id integer AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT 	null );
+	
+	- Table items:
+	-CREATE TABLE items ( id integer PRIMARY KEY AUTO_INCREMENT, name varchar (255) NOT null, 	description varchar (255) NOT null, price integer 	NOT null, stock integer NOT null, 	category_id integer not null, FOREIGN key(category_id) REFERENCES categories (id) );
+
+
+3. Insert Data
+	- users:
+	INSERT INTO users (name) VALUES("name"), ("email"), ("password");
+
+	- categories:
+	INSERT into categories (name) VALUES ('gadget');
+	NSERT into categories (name) VALUES ('cloth');
+	INSERT into categories (name) VALUES ('men');
+	INSERT into categories (name) VALUES ('women');
+	INSERT into categories (name) VALUES ('branded');
+
+	- items:
+	INSERT into items (name, description, price, stock, category_id) VALUES ('Sumsang 	b50','hape keren dari merek sumsang','4000000','100','1');
+	
+	INSERT into items (name, description, price, stock, category_id) VALUES 	('Uniklooh','baju keren dari brand ternama','500000','50','2');
+	
+	INSERT into items (name, description, price, stock, category_id) VALUES ('IMHO 	Watch','jam tangan anak yang jujur banget','2000000','10','1');
+
+
+4. Select Data
+	a. select id, name, email from users;
+
+	b. SELECT * FROM items WHERE price > 1000000;
+	   SELECT * from items WHERE name LIKE "%watch%";
+	   
+	c. SELECT items. *, categories.name AS kategori FROM items INNER JOIN categories ON 	   items.category_id = categories.id;
+
+
+5. Update Data
+	UPDATE items SET price = 2500000 WHERE id = 1;
