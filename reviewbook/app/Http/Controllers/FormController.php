@@ -11,8 +11,7 @@ class FormController extends Controller
         return view('regiter');
     }
     public function welcome(request $request);
-        dd($request->all());
-
+        dd($request->all()); 
         return view('home');
     }
 }
