@@ -1,0 +1,19 @@
+untuk migration buat satu migration utk 1 table
+
+urutan 1:
+migration untuk users
+migration untuk genres
+
+urutan 2:
+migration untuk profile
+migration untuk books
+
+urutan 3:
+migration comments
+
+cara membuat create migration :
+- php artisan make:migration create_users_table
+  setelah (create successfully)
+- php artisan migrate
+  setelah (running migrations done)
+- lalu cek myphpadmin , akan muncul table nya.

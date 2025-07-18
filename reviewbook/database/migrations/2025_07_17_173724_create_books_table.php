@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('stok');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('genre_id')->references('id')->on('genres');
             $table->timestamps();
         });
     }
