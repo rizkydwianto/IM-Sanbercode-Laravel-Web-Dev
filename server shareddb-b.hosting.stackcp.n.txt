@@ -1,0 +1,5 @@
+server: shareddb-b.hosting.stackcp.net
+db/username: rizzzDB-35333e0d
+password: letr7te3zf
+
+link deploy : https://rizkyrzzz.laravelsanbercode.my.id/
